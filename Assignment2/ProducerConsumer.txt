@@ -1,0 +1,61 @@
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Example Thread-based Programs...
+Initializing Thread Scheduler...
+        Producer-A         A
+A       Producer-B             B
+AB      Consumer-1                               |      A
+B       Producer-C                 C
+BC      Consumer-2                               |          B
+C       Producer-D                     D
+CD      Producer-E                         E
+CDE     Consumer-3                               |              C
+DE      Consumer-2                               |          D
+E       Consumer-1                               |      E
+        Producer-A         A
+A       Producer-B             B
+AB      Producer-D                     D
+ABD     Producer-C                 C
+ABDC    Producer-E                         E
+ABDCE   Consumer-3                               |              A
+BDCE    Consumer-2                               |          B
+DCE     Producer-A         A
+DCEA    Producer-B             B
+DCEAB   Consumer-1                               |      D
+CEAB    Consumer-2                               |          C
+EAB     Producer-D                     D
+EABD    Consumer-3                               |              E
+ABD     Producer-C                 C
+ABDC    Consumer-1                               |      A
+BDC     Producer-E                         E
+BDCE    Consumer-2                               |          B
+DCE     Consumer-3                               |              D
+CE      Producer-A         A
+CEA     Consumer-1                               |      C
+EA      Producer-B             B
+EAB     Consumer-2                               |          E
+AB      Producer-D                     D
+ABD     Consumer-3                               |              A
+BD      Producer-C                 C
+BDC     Consumer-1                               |      B
+DC      Producer-E                         E
+DCE     Consumer-2                               |          D
+CE      Producer-A         A
+CEA     Consumer-3                               |              C
+EA      Producer-B             B
+EAB     Consumer-1                               |      E
+AB      Consumer-2                               |          A
+B       Producer-D                     D
+BD      Consumer-3                               |              B
+D       Producer-C                 C
+DC      Consumer-1                               |      D
+C       Consumer-2                               |          C
+        Producer-E                         E
+E       Consumer-3                               |              E
+     Done!  The next instruction to execute will be:
+000EC8: 09000000       ret     
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 260506
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 260506

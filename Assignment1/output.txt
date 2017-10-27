@@ -1,0 +1,509 @@
+Script started on Sat 30 Sep 2017 03:02:30 PM PDT
+unmesh@ada:~/Projects/CS510:/Assignment1$ make
+make: Nothing to be done for 'all'.
+unmesh@ada:~/Projects/CS510:/Assignment1$ blitz -g HelloWorld
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Hello, world...
+The value of b is 12
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> g
+Beginning execution...
+The value of b is 13
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> g
+Beginning execution...
+The value of b is 14
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> g
+Beginning execution...
+The value of b is 15
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> fr
+=====  Frame number 0 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 20
+Frame Addr:       00FFFE74
+frameSize:        12
+totalParmSize:    4
+                         ==========
+   sp--> -20   00FFFE60:  0000000F
+         -16   00FFFE64:  0000000F
+         -12   00FFFE68:  0000906C
+R.D.ptr:  -8   00FFFE6C:  000028D0
+    r13:  -4   00FFFE70:  00000015
+     fp:   0   00FFFE74:  00FFFE90
+RetAddr:   4   00FFFE78:  000028B8
+                         ==========
+   Args:   8   00FFFE7C:  0000000E
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFE7C:  0000000E    value = 14
+  _temp_15
+         -12   00FFFE68:  0000906C
+  b: int
+         -16   00FFFE64:  0000000F    value = 15
+=================================================
+> down
+=====  Frame number 1 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 21
+Frame Addr:       00FFFE90
+frameSize:        12
+totalParmSize:    4
+                         ==========
+         -20   00FFFE7C:  0000000E
+         -16   00FFFE80:  0000000E
+         -12   00FFFE84:  0000906C
+R.D.ptr:  -8   00FFFE88:  000028D0
+    r13:  -4   00FFFE8C:  00000015
+     fp:   0   00FFFE90:  00FFFEAC
+RetAddr:   4   00FFFE94:  000028B8
+                         ==========
+   Args:   8   00FFFE98:  0000000D
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFE98:  0000000D    value = 13
+  _temp_15
+         -12   00FFFE84:  0000906C
+  b: int
+         -16   00FFFE80:  0000000E    value = 14
+=================================================
+> down
+=====  Frame number 2 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 21
+Frame Addr:       00FFFEAC
+frameSize:        12
+totalParmSize:    4
+                         ==========
+         -20   00FFFE98:  0000000D
+         -16   00FFFE9C:  0000000D
+         -12   00FFFEA0:  0000906C
+R.D.ptr:  -8   00FFFEA4:  000028D0
+    r13:  -4   00FFFEA8:  00000015
+     fp:   0   00FFFEAC:  00FFFEC8
+RetAddr:   4   00FFFEB0:  000028B8
+                         ==========
+   Args:   8   00FFFEB4:  0000000C
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFEB4:  0000000C    value = 12
+  _temp_15
+         -12   00FFFEA0:  0000906C
+  b: int
+         -16   00FFFE9C:  0000000D    value = 13
+=================================================
+> up
+=====  Frame number 1 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 21
+Frame Addr:       00FFFE90
+frameSize:        12
+totalParmSize:    4
+                         ==========
+         -20   00FFFE7C:  0000000E
+         -16   00FFFE80:  0000000E
+         -12   00FFFE84:  0000906C
+R.D.ptr:  -8   00FFFE88:  000028D0
+    r13:  -4   00FFFE8C:  00000015
+     fp:   0   00FFFE90:  00FFFEAC
+RetAddr:   4   00FFFE94:  000028B8
+                         ==========
+   Args:   8   00FFFE98:  0000000D
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFE98:  0000000D    value = 13
+  _temp_15
+         -12   00FFFE84:  0000906C
+  b: int
+         -16   00FFFE80:  0000000E    value = 14
+=================================================
+> fr
+=====  Frame number 1 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 21
+Frame Addr:       00FFFE90
+frameSize:        12
+totalParmSize:    4
+                         ==========
+         -20   00FFFE7C:  0000000E
+         -16   00FFFE80:  0000000E
+         -12   00FFFE84:  0000906C
+R.D.ptr:  -8   00FFFE88:  000028D0
+    r13:  -4   00FFFE8C:  00000015
+     fp:   0   00FFFE90:  00FFFEAC
+RetAddr:   4   00FFFE94:  000028B8
+                         ==========
+   Args:   8   00FFFE98:  0000000D
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFE98:  0000000D    value = 13
+  _temp_15
+         -12   00FFFE84:  0000906C
+  b: int
+         -16   00FFFE80:  0000000E    value = 14
+=================================================
+> st
+   Function/Method            Frame Addr   Execution at...
+   ========================   ==========   =====================
+   bar                         00FFFE74    HelloWorld.c, line 20
+   bar                         00FFFE90    HelloWorld.c, line 21
+   bar                         00FFFEAC    HelloWorld.c, line 21
+   bar                         00FFFEC8    HelloWorld.c, line 21
+   foo                         00FFFEE0    HelloWorld.c, line 11
+   main                        00FFFEF8    HelloWorld.c, line 7
+Bottom of activation frame stack!
+> i
+============================
+Memory size = 0x01000000     ( decimal: 16777216    )
+Page size   = 0x00002000     ( decimal: 8192        )
+.text Segment
+    addr    = 0x00000000     ( decimal: 0           )
+    size    = 0x00004000     ( decimal: 16384       )
+.data Segment
+    addr    = 0x00004000     ( decimal: 16384       )
+    size    = 0x00006000     ( decimal: 24576       )
+.bss Segment
+    addr    = 0x0000A000     ( decimal: 40960       )
+    size    = 0x00000000     ( decimal: 0           )
+=====  USER REGISTERS  =====
+  r0  = 0x00000000     ( decimal: 0 )
+  r1  = 0x00000000     ( decimal: 0 )
+  r2  = 0x00000000     ( decimal: 0 )
+  r3  = 0x00000000     ( decimal: 0 )
+  r4  = 0x00000000     ( decimal: 0 )
+  r5  = 0x00000000     ( decimal: 0 )
+  r6  = 0x00000000     ( decimal: 0 )
+  r7  = 0x00000000     ( decimal: 0 )
+  r8  = 0x00000000     ( decimal: 0 )
+  r9  = 0x00000000     ( decimal: 0 )
+  r10 = 0x00000000     ( decimal: 0 )
+  r11 = 0x00000000     ( decimal: 0 )
+  r12 = 0x00000000     ( decimal: 0 )
+  r13 = 0x00000000     ( decimal: 0 )
+  r14 = 0x00000000     ( decimal: 0 )
+  r15 = 0x00000000     ( decimal: 0 )
+=====  SYSTEM REGISTERS  =====
+  r0  = 0x00000000     ( decimal: 0 )
+  r1  = 0x00000003     ( decimal: 3           )
+  r2  = 0x0000000A     ( decimal: 10          )
+  r3  = 0x00000012     ( decimal: 18          )
+  r4  = 0x8CC97375     ( decimal: -1932954763 )
+  r5  = 0x00000000     ( decimal: 0 )
+  r6  = 0x00000000     ( decimal: 0 )
+  r7  = 0x00000000     ( decimal: 0 )
+  r8  = 0x00000000     ( decimal: 0 )
+  r9  = 0x00000000     ( decimal: 0 )
+  r10 = 0x00004445     ( decimal: 17477       )
+  r11 = 0x00000000     ( decimal: 0 )
+  r12 = 0x00000000     ( decimal: 0 )
+  r13 = 0x00000014     ( decimal: 20              IllegalInstruction )
+  r14 = 0x00FFFE74     ( decimal: 16776820    )
+  r15 = 0x00FFFE60     ( decimal: 16776800    )
+=====  FLOATING-POINT REGISTERS  =====
+  f0  = 0x00000000 00000000   ( value = 0 )
+  f1  = 0x00000000 00000000   ( value = 0 )
+  f2  = 0x00000000 00000000   ( value = 0 )
+  f3  = 0x00000000 00000000   ( value = 0 )
+  f4  = 0x00000000 00000000   ( value = 0 )
+  f5  = 0x00000000 00000000   ( value = 0 )
+  f6  = 0x00000000 00000000   ( value = 0 )
+  f7  = 0x00000000 00000000   ( value = 0 )
+  f8  = 0x00000000 00000000   ( value = 0 )
+  f9  = 0x00000000 00000000   ( value = 0 )
+  f10 = 0x00000000 00000000   ( value = 0 )
+  f11 = 0x00000000 00000000   ( value = 0 )
+  f12 = 0x00000000 00000000   ( value = 0 )
+  f13 = 0x00000000 00000000   ( value = 0 )
+  f14 = 0x00000000 00000000   ( value = 0 )
+  f15 = 0x00000000 00000000   ( value = 0 )
+======================================
+  PC   = 0x000028A4     ( decimal: 10404       )
+  PTBR = 0x00000000     ( decimal: 0 )
+  PTLR = 0x00000000     ( decimal: 0 )
+                        ---- ----  ---- ----  ---- ----  --IS PZVN
+  SR   = 0x00000010  =  0000 0000  0000 0000  0000 0000  0001 0000
+           I = 0   Interrupts Disabled
+           S = 1   System Mode
+           P = 0   Paging Disabled
+           Z = 0   Not Zero
+           V = 0   No Overflow
+           N = 0   Not Negative
+==============================
+  Pending Interrupts                = 0x00000002
+    TIMER_INTERRUPT
+  System Trap Number                = 0x00000000
+  Page Invalid Offending Address    = 0x00000000
+  Page Readonly Offending Address   = 0x00000000
+  Time of next timer event          = 5005
+  Time of next disk event           = 2147483647
+  Time of next serial in event      = 30039
+  Time of next serial out event     = 2147483647
+    Current Time                    = 864
+    Time of next event              = 5005
+    Time Spent Sleeping             = 0
+      Instructions Executed         = 864
+  Number of Disk Reads              = 0
+  Number of Disk Writes             = 0
+==============================
+The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+About to execute DEBUG statement                   in bar (HelloWorld.c, line 20)  time = 864
+> step
+Done!  The next instruction to execute will be:
+0028A8: 8F1F0000       store   r1,[r15+0x0000]	! decimal: 0  (PowerOnReset)
+> step
+Done!  The next instruction to execute will be:
+0028AC: 87D00015       or      r0,0x0015,r13	! decimal: 21, ascii: ".."  
+> t
+About to execute FUNCTION CALL                     in bar (HelloWorld.c, line 21)  time = 868
+> i
+============================
+Memory size = 0x01000000     ( decimal: 16777216    )
+Page size   = 0x00002000     ( decimal: 8192        )
+.text Segment
+    addr    = 0x00000000     ( decimal: 0           )
+    size    = 0x00004000     ( decimal: 16384       )
+.data Segment
+    addr    = 0x00004000     ( decimal: 16384       )
+    size    = 0x00006000     ( decimal: 24576       )
+.bss Segment
+    addr    = 0x0000A000     ( decimal: 40960       )
+    size    = 0x00000000     ( decimal: 0           )
+=====  USER REGISTERS  =====
+  r0  = 0x00000000     ( decimal: 0 )
+  r1  = 0x00000000     ( decimal: 0 )
+  r2  = 0x00000000     ( decimal: 0 )
+  r3  = 0x00000000     ( decimal: 0 )
+  r4  = 0x00000000     ( decimal: 0 )
+  r5  = 0x00000000     ( decimal: 0 )
+  r6  = 0x00000000     ( decimal: 0 )
+  r7  = 0x00000000     ( decimal: 0 )
+  r8  = 0x00000000     ( decimal: 0 )
+  r9  = 0x00000000     ( decimal: 0 )
+  r10 = 0x00000000     ( decimal: 0 )
+  r11 = 0x00000000     ( decimal: 0 )
+  r12 = 0x00000000     ( decimal: 0 )
+  r13 = 0x00000000     ( decimal: 0 )
+  r14 = 0x00000000     ( decimal: 0 )
+  r15 = 0x00000000     ( decimal: 0 )
+=====  SYSTEM REGISTERS  =====
+  r0  = 0x00000000     ( decimal: 0 )
+  r1  = 0x0000000F     ( decimal: 15          )
+  r2  = 0x0000000A     ( decimal: 10          )
+  r3  = 0x00000012     ( decimal: 18          )
+  r4  = 0x8CC97375     ( decimal: -1932954763 )
+  r5  = 0x00000000     ( decimal: 0 )
+  r6  = 0x00000000     ( decimal: 0 )
+  r7  = 0x00000000     ( decimal: 0 )
+  r8  = 0x00000000     ( decimal: 0 )
+  r9  = 0x00000000     ( decimal: 0 )
+  r10 = 0x00004341     ( decimal: 17217       )
+  r11 = 0x00000000     ( decimal: 0 )
+  r12 = 0x00000000     ( decimal: 0 )
+  r13 = 0x00000015     ( decimal: 21          )
+  r14 = 0x00FFFE74     ( decimal: 16776820    )
+  r15 = 0x00FFFE60     ( decimal: 16776800    )
+=====  FLOATING-POINT REGISTERS  =====
+  f0  = 0x00000000 00000000   ( value = 0 )
+  f1  = 0x00000000 00000000   ( value = 0 )
+  f2  = 0x00000000 00000000   ( value = 0 )
+  f3  = 0x00000000 00000000   ( value = 0 )
+  f4  = 0x00000000 00000000   ( value = 0 )
+  f5  = 0x00000000 00000000   ( value = 0 )
+  f6  = 0x00000000 00000000   ( value = 0 )
+  f7  = 0x00000000 00000000   ( value = 0 )
+  f8  = 0x00000000 00000000   ( value = 0 )
+  f9  = 0x00000000 00000000   ( value = 0 )
+  f10 = 0x00000000 00000000   ( value = 0 )
+  f11 = 0x00000000 00000000   ( value = 0 )
+  f12 = 0x00000000 00000000   ( value = 0 )
+  f13 = 0x00000000 00000000   ( value = 0 )
+  f14 = 0x00000000 00000000   ( value = 0 )
+  f15 = 0x00000000 00000000   ( value = 0 )
+======================================
+  PC   = 0x000028B4     ( decimal: 10420       )
+  PTBR = 0x00000000     ( decimal: 0 )
+  PTLR = 0x00000000     ( decimal: 0 )
+                        ---- ----  ---- ----  ---- ----  --IS PZVN
+  SR   = 0x00000010  =  0000 0000  0000 0000  0000 0000  0001 0000
+           I = 0   Interrupts Disabled
+           S = 1   System Mode
+           P = 0   Paging Disabled
+           Z = 0   Not Zero
+           V = 0   No Overflow
+           N = 0   Not Negative
+==============================
+  Pending Interrupts                = 0x00000002
+    TIMER_INTERRUPT
+  System Trap Number                = 0x00000000
+  Page Invalid Offending Address    = 0x00000000
+  Page Readonly Offending Address   = 0x00000000
+  Time of next timer event          = 5005
+  Time of next disk event           = 2147483647
+  Time of next serial in event      = 30039
+  Time of next serial out event     = 2147483647
+    Current Time                    = 868
+    Time of next event              = 5005
+    Time Spent Sleeping             = 0
+      Instructions Executed         = 868
+  Number of Disk Reads              = 0
+  Number of Disk Writes             = 0
+==============================
+The next instruction to execute will be:
+0028B4: A0FFFF58       call    0xFFFF58		! targetAddr = _function_3_bar
+About to execute FUNCTION CALL                     in bar (HelloWorld.c, line 21)  time = 868
+> help
+===========================================================================
+This program accepts commands typed into the terminal.  Each command
+should be typed without any arguments; the commands will prompt for
+arguments when needed.  Case is not significant.  Some abbreviations
+are allowed, as shown.  Typing control-C will halt execution.
+
+The available commands are:
+
+  quit    - Terminate this program
+  q         
+  help    - Produce this display
+  h         
+  info    - Display the current state of the machine
+  i         
+  dumpMem - Display the contents of memory
+  dm        
+  setmem  - Used to alter memory contents
+  fmem    - Display floating point values from memory
+  go      - Begin or resume BLITZ instruction execution
+  g         
+  step    - Single step; execute one machine-level instruction
+  s         
+  t       - Single step; execute one KPL statement
+  u       - Execute continuously until next KPL call, send, or return statement
+  stepn   - Execute N machine-level instructions
+  r       - Display all the integer registers
+  r1      - Change the value of register r1
+   ...       
+  r15     - Change the value of register r15
+  float   - Display all the floating-point registers
+  f         
+  f0      - Change the value of floating-point register f0
+   ...       
+  f15     - Change the value of floating-point register f15
+  dis     - Disassemble several instructions
+  d       - Disassemble several instructions from the current location
+  hex     - Convert a user-entered hex number into decimal and ascii
+  dec     - Convert a user-entered decimal number into hex and ascii
+  ascii   - Convert a user-entered ascii char into hex and decimal
+  setI    - Set the I bit in the Status Register
+  setS    - Set the S bit in the Status Register
+  setP    - Set the P bit in the Status Register
+  setZ    - Set the Z bit in the Status Register
+  setV    - Set the V bit in the Status Register
+  setN    - Set the N bit in the Status Register
+  clearI  - Clear the I bit in the Status Register
+  clearS  - Clear the S bit in the Status Register
+  clearP  - Clear the P bit in the Status Register
+  clearZ  - Clear the Z bit in the Status Register
+  clearV  - Clear the V bit in the Status Register
+  clearN  - Clear the N bit in the Status Register
+  setPC   - Set the Program Counter (PC)
+  setPTBR - Set the Page Table Base Register (PTBR)
+  setPTLR - Set the Page Table Length Register (PTLR)
+  pt      - Display the Page Table
+  trans   - Perform page table translation on a single address
+  cancel  - Cancel all pending interrupts
+  labels  - Display the label table
+  find    - Find a label by name
+  find2   - Find a label by value
+  add     - Add a new label, inserting it into the indexes
+  reset   - Reset the machine state and re-read the a.out file
+  io      - Display the state of the I/O devices
+  read    - Read a word from memory-mapped I/O region
+  write   - Write a word to memory-mapped I/O region
+  raw     - Switch serial input to raw mode
+  cooked  - Switch serial input to cooked mode
+  input   - Enter input characters for future serial I/O input
+  format  - Create and format a BLITZ disk file
+  sim     - Display the current simulation constants
+  stack   - Display the KPL calling stack
+  st        
+  frame   - Display the current activation frame
+  fr        
+  up      - Move up in the activation frame stack
+  down    - Move down in the activation frame stack
+
+===========================================================================
+> reset
+Resetting all CPU registers and re-reading file "HelloWorld"...
+> g
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Hello, world...
+The value of b is 12
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> g
+Beginning execution...
+The value of b is 13
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> g
+Beginning execution...
+The value of b is 14
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1	! decimal: -16
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 779
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 779
+unmesh@ada:~/Projects/CS510:/Assignment1$ exit
+exit
+
+Script done on Sat 30 Sep 2017 03:04:25 PM PDT
